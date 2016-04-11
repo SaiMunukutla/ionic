@@ -29,8 +29,7 @@ RUN export JAVA_HOME="$(find /usr -type l -name 'default-java')"
 RUN echo "export JAVA_HOME=$JAVA_HOME" >> ".profile"
 RUN npm install -g ionic
 RUN npm install -g cordova
-RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools,build-tools-23.0.1,android-23,addon-google_apis_x86-google-23,extra-android-support,extra-andr
-oid-m2repository,extra-google-m2repository,sys-img-x86-android-23
+RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools,build-tools-23.0.1,android-23,addon-google_apis_x86-google-23,extra-android-support,extra-android-m2repository,extra-google-m2repository,sys-img-x86-android-23
 EXPOSE 8100
 RUN ionic start newapp sidemenu
 VOLUME /workspace
